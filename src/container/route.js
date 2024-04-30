@@ -7,6 +7,7 @@ const importAll = (r) => {
       .replace(/\/index\.js$/, '')
       .replace(/\.js$/, '')
       .replace(/\(|\)/g, '') // Remove parentheses
+      .replace(/\[([^\]]+)\]/, ':$1')
       .toLowerCase(),
     component: r(key).default,
   }));
