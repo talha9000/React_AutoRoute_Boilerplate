@@ -1,11 +1,11 @@
 import React from 'react'
 
-const tp = () => {
+const test = () => {
   return (
     <div>
-      this is test
+      asag
     </div>
   )
 }
 
-export default tp
+export default test

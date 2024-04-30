@@ -11,7 +11,7 @@ const importAll = (r) => {
       .toLowerCase(),
     component: r(key).default,
   }));
-
+  
   const folders = r.keys().filter((key) => key.indexOf('/') !== -1 && key.endsWith('/')).map((folder) => {
     const folderName = folder.substr(1).replace(/\/$/, '').toLowerCase().replace(/\(|\)/g, ''); // Remove parentheses
     const folderFiles = importAll(require.context(`../pages/${folderName}`, true, /\.js$/));

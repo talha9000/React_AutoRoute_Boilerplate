@@ -12,7 +12,7 @@ const PageContent = () => {
           <Route key={index} path={route.path} element={<route.component />} />
         ))}
         {/* Add a Route for 404 page */}
-        <Route path="*" element={<NotFoundPage />} />
+      
       </Routes>
     </Suspense>
   );
