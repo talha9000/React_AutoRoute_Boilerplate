@@ -1,7 +1,6 @@
-// route.js
+ 
 import { useEffect } from 'react';
-
-// Function to recursively import files and folders from the page directory
+ 
 const importAll = (r) => {
   const files = r.keys().map((key) => ({
     path: key.substr(1).replace(/\/index\.js$/, '').replace(/\.js$/, '').toLowerCase(),
@@ -19,8 +18,7 @@ const importAll = (r) => {
 
   return [...files, ...folders];
 };
-
-// Dynamically import all JavaScript files and folders in the specified directory and its subdirectories
+ 
 const routes = importAll(require.context('../pages', true, /\.js$/));
 
 export { routes };
