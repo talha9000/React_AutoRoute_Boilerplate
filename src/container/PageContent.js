@@ -2,6 +2,7 @@
 import React, { lazy, Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { routes } from './route';
+import NotFoundPage from '../msic/NotFoundPage'; // Import your 404 page component
 
 const PageContent = () => {
   return (
@@ -10,6 +11,8 @@ const PageContent = () => {
         {routes.map((route, index) => (
           <Route key={index} path={route.path} element={<route.component />} />
         ))}
+        {/* Add a Route for 404 page */}
+        <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </Suspense>
   );
